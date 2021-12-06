@@ -24,20 +24,11 @@ lineReader.eachLine('day5.input.txt', function(line, last) {
         dangerousPoints++;
       }
     }
-  } else if ((y2-y1)/(x2-x1) === 1) {
+  } else if (Math.abs((y2-y1)/(x2-x1)) === 1) {
+    let slope = (y2-y1)/(x2-x1) === 1;
     let pointToPlace = Math.max(x1,x2)-Math.min(x1,x2)+1;
     for (let i = 0; i < pointToPlace; i++) {
-      let x = Math.min(x1,x2)+i;
-      let y = Math.min(y1,y2)+i;
-      ventMap[x][y]++;
-      if (ventMap[x][y] === 2) {
-        dangerousPoints++;
-      }
-    }
-  } else if ((y2-y1)/(x2-x1) === -1) {
-    let pointToPlace = Math.max(x1,x2)-Math.min(x1,x2)+1;
-    for (let i = 0; i < pointToPlace; i++) {
-      let x = Math.max(x1,x2)-i;
+      let x = slope ? Math.min(x1,x2)+i : Math.max(x1,x2)-i;
       let y = Math.min(y1,y2)+i;
       ventMap[x][y]++;
       if (ventMap[x][y] === 2) {
