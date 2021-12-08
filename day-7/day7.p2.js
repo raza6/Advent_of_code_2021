@@ -24,7 +24,7 @@ function computeScore(target) {
   let score = 0;
 
   for (let i = 0; i < crabPos.length; i++) {
-    let diff = (Math.max(target, crabPos[i]) - Math.min(target, crabPos[i]));
+    let diff = Math.abs(target - crabPos[i]);
     score += (diff*(diff+1))/2;
   }
 

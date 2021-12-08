@@ -16,7 +16,7 @@ function solve() {
   let halfIdx = Math.floor(crabPos.length / 2);
   let median = (crabPos[halfIdx-1] + crabPos[halfIdx])/2;
 
-  let res = crabPos.reduce((acc, v) => acc += (Math.max(median, v) - Math.min(median, v)), 0);
+  let res = crabPos.reduce((acc, v) => acc += Math.abs(median - v), 0);
 
   console.log('Result : ', res);
 }
