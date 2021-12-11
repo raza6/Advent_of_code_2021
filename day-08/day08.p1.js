@@ -2,7 +2,7 @@ const lineReader = require('line-reader');
 
 let segments = [];
 
-lineReader.eachLine('day8.input.txt', function(line, last) {
+lineReader.eachLine('day08.input.txt', function(line, last) {
   [input, output] = line.split(' | ');
   segments.push({
     input: input.split(' '),

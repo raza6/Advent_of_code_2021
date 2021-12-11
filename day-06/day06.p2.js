@@ -3,7 +3,7 @@ const lineReader = require('line-reader');
 let lanternfish = [];
 let fishStates = new Array(9).fill(0);
 
-lineReader.eachLine('day6.input.txt', function(line, last) {
+lineReader.eachLine('day06.input.txt', function(line, last) {
   lanternfish = line.split(',').map(n => parseInt(n));
 
   if (last) {

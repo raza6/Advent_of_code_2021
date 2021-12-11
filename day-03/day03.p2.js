@@ -5,7 +5,7 @@ let bitWordLen;
 let o2;
 let co2;
 
-lineReader.eachLine('day3.input.txt', function(line, last) {
+lineReader.eachLine('day03.input.txt', function(line, last) {
   bits.push(line);
 
   if (last) {

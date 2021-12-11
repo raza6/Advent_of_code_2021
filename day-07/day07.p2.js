@@ -2,7 +2,7 @@ const lineReader = require('line-reader');
 
 let crabPos = [];
 
-lineReader.eachLine('day7.input.txt', function(line, last) {
+lineReader.eachLine('day07.input.txt', function(line, last) {
   crabPos = line.split(',').map(p => parseInt(p));
 
   if (last) {

@@ -7,7 +7,7 @@ let firstLine = true;
 let drawnNumbers = [];
 let bingoBoards = [];
 
-lineReader.eachLine('day4.input.txt', function(line, last) {
+lineReader.eachLine('day04.input.txt', function(line, last) {
   if (firstLine) {
     drawnNumbers = line.split(',').map(n => parseInt(n))
     firstLine = false;

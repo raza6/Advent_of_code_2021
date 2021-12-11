@@ -3,7 +3,7 @@ const lineReader = require('line-reader');
 let allDepths = [];
 let increasement = 0;
 
-lineReader.eachLine('day1.input.txt', function(line, last) {
+lineReader.eachLine('day01.input.txt', function(line, last) {
   allDepths.push(parseInt(line));
 
   if (last) {

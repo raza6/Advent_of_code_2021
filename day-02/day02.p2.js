@@ -7,7 +7,7 @@ currentPosition = {
   aim: 0,
 }
 
-lineReader.eachLine('day2.input.txt', function(line, last) {
+lineReader.eachLine('day02.input.txt', function(line, last) {
   const el = line.split(' ');
   commands.push({ 
     move: el[0],

@@ -3,7 +3,7 @@ const lineReader = require('line-reader');
 let ventMap = [...new Array(1000)].map(() => new Array(1000).fill(0));
 let dangerousPoints = 0;
 
-lineReader.eachLine('day5.input.txt', function(line, last) {
+lineReader.eachLine('day05.input.txt', function(line, last) {
   let match = /(\d+),(\d+)\s+->\s+(\d+),(\d+)/g.exec(line);
   let x1 = match[1];
   let y1 = match[2];

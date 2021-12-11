@@ -2,7 +2,7 @@ const lineReader = require('line-reader');
 
 let heightMap = [];
 
-lineReader.eachLine('day9.input.txt', function(line, last) {
+lineReader.eachLine('day09.input.txt', function(line, last) {
   heightMap.push(line.split('').map(v => parseInt(v)));
 
   if (last) {

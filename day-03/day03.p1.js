@@ -7,7 +7,7 @@ let gammaR = 0;
 let espilonR = 0;
 
 
-lineReader.eachLine('day3.input.txt', function(line, last) {
+lineReader.eachLine('day03.input.txt', function(line, last) {
   bits.push(line);
 
   if (last) {
