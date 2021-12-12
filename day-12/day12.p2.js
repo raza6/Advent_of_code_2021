@@ -31,12 +31,12 @@ lineReader.eachLine('day12.input.txt', function(line, last) {
 });
 
 function solve() {
-  bfs(graph['start']);
+  dfs(graph['start']);
 
   console.log('Result : ', allPaths.length);
 }
 
-function bfs(currentNode, currentPath = [], smallVisited = [], duplicate) {
+function dfs(currentNode, currentPath = [], smallVisited = [], duplicate) {
   if (currentNode.small) {
     smallVisited.push(currentNode.name);
   }
@@ -50,14 +50,14 @@ function bfs(currentNode, currentPath = [], smallVisited = [], duplicate) {
     if (nodeName !== 'start') {
       if (duplicate) {
         if (!smallVisited.includes(nodeName)) {
-          bfs(graph[nodeName], [...currentPath], [...smallVisited], duplicate);
+          dfs(graph[nodeName], [...currentPath], [...smallVisited], duplicate);
         }
       } else {
         const occ = smallVisited.filter(n => n === nodeName).length;
         if (occ === 0) {
-          bfs(graph[nodeName], [...currentPath], [...smallVisited], duplicate);
+          dfs(graph[nodeName], [...currentPath], [...smallVisited], duplicate);
         } else if (occ === 1) {
-          bfs(graph[nodeName], [...currentPath], [...smallVisited], nodeName);
+          dfs(graph[nodeName], [...currentPath], [...smallVisited], nodeName);
         }
       }
     }   
