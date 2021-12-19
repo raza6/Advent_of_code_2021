@@ -50,7 +50,7 @@ function fixExplode(fn) {
     updateFirstLeftUpward(fn, fn.left);
     // add to closest right value
     updateFirstRightUpward(fn, fn.right);
-    if (fn.parent.left.depth > 3) {
+    if (fn.type === 'left') {
       fn.parent.left = 0;
     } else {
       fn.parent.right = 0;
