@@ -18,10 +18,10 @@ function solve() {
   let totalVolume = 0;
   
   for (let step of initSteps) { // Compute volume and add cube to the structure
-    if (step.on) { // No need to handle volume of off cubes, just add them to the 
+    if (step.on) { // No need to handle volume of off cubes, just add them to the structure
       totalVolume += getVolume(step) - overlap(step, existingCubes);
     }
-    existingCubes.push(step); // Add all cubes to the structures 
+    existingCubes.push(step); // Add all cubes to the structure
   }
 
   console.log('Result : ', totalVolume);
